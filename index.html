@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--head-->
+    <title>ICSMAMET 2027 — International Conference on Sustainable Materials, Advanced Manufacturing and Emerging Technologies</title>
+    <meta name="description" content="International Conference on Sustainable Materials, Advanced Manufacturing and Emerging Technologies (ICSMAMET 2027), 21–23 July 2027, VNR VJIET, Hyderabad, India." />
+    <!--/head-->
+    <meta name="theme-color" content="#0f3b2e" />
+    <meta name="color-scheme" content="light dark" />
+    <script>
+      // Apply the saved theme (or the device setting) before first paint to avoid a flash.
+      (function () {
+        var t = null;
+        try { t = localStorage.getItem('icsmamet-theme'); } catch (e) {}
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+        if (t === 'dark') {
+          var m = document.querySelector('meta[name="theme-color"]');
+          if (m) m.setAttribute('content', '#0c1613');
+        }
+      })();
+    </script>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
+    <div id="root"><!--app--></div>
+    <noscript>
+      <style>.menu-toggle{display:none!important}.primary-nav{display:block!important;order:3;flex-basis:100%}.site-header__inner{flex-wrap:wrap}</style>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

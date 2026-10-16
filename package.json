@@ -1,0 +1,37 @@
+{
+  "name": "icsmamet-website",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Official website of ICSMAMET 2027 \u2014 International Conference on Sustainable Materials, Advanced Manufacturing and Emerging Technologies, VNR VJIET, Hyderabad.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "typecheck": "tsc -b --noEmit",
+    "build": "tsc -b && vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr && node scripts/prerender.mjs",
+    "preview": "node scripts/serve.mjs",
+    "test:e2e": "node scripts/smoke-test.mjs",
+    "photos": "node scripts/prepare-hero-photos.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@fontsource-variable/source-serif-4": "^5.3.1",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@fontsource/ibm-plex-sans": "^5.3.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-router-dom": "^6.30.6"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^5.2.0",
+    "axe-core": "^4.14.0",
+    "playwright-core": "1.56",
+    "sharp": "^0.34.5",
+    "typescript": "5.8",
+    "vite": "^7.3.7"
+  }
+}
